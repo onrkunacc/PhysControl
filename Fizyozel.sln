@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fizyozel", "Fizyozel\Fizyozel.csproj", "{0AD9CA69-124B-4E58-A38B-30CB16E7795F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AD9CA69-124B-4E58-A38B-30CB16E7795F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD9CA69-124B-4E58-A38B-30CB16E7795F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD9CA69-124B-4E58-A38B-30CB16E7795F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD9CA69-124B-4E58-A38B-30CB16E7795F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7870848-F699-4A4A-9E75-F62851DB5D4C}
+	EndGlobalSection
+EndGlobal
