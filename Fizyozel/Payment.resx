@@ -117,4 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAASoAAAApCAYAAACC2WQ1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADCSURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnHPRCFcxn
+        BPQAeIW99zPn/JqZlXbadDM1xjkAak6bbqaECmgSKiBPqIA8oQLyhArIEyogT6iAPKEC8oQKyBMqIE+o
+        gDyhAvKECsgTKiBPqIA8oQLyhArIEyogT6iAPKEC8oQKyBMqIE+ogDyhAvKECsgTKiBPqIA8oQLyhArI
+        EyogT6iAPKEC8oQKyBMqIE+ogDyhAvL+QrXW+pzDzKy006abKYCyMX7TQMoGKMWqdwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAASoAAAApCAYAAACC2WQ1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADCSURBVHhe7dRBCQQxAATB+FeVEBkr4wTcEcjnHPRCFcxn
+        BPQAeIW99zPn/JqZlXbadDM1xjkAak6bbqaECmgSKiBPqIA8oQLyhArIEyogT6iAPKEC8oQKyBMqIE+o
+        gDyhAvKECsgTKiBPqIA8oQLyhArIEyogT6iAPKEC8oQKyBMqIE+ogDyhAvKECsgTKiBPqIA8oQLyhArI
+        EyogT6iAPKEC8oQKyBMqIE+ogDyhAvL+QrXW+pzDzKy006abKYCyMX7TQMoGKMWqdwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
 </root>

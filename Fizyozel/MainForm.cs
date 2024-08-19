@@ -21,5 +21,12 @@ namespace Fizyozel
         {
 
         }
+        // butona tıklandığında yeni bir üye ekleme formu açar
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            AddMemberForm addMember = new AddMemberForm();
+            addMember.Show();
+            this.Hide();
+        }
     }
 }
