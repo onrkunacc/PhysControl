@@ -32,6 +32,17 @@ namespace Fizyozel
 
             Con.Close();
         }
+        private void FilterByName()
+        {
+            Con.Open();
+            string query = "select * from PaymentTbl where PMember = '"+SearchName.Text+"';";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder();
+            var ds = new DataSet();
+            sda.Fill(ds);
+            PaymentDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void Populate()
         {
             Con.Open();
@@ -98,6 +109,19 @@ namespace Fizyozel
                 Con.Close();
                 Populate();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FilterByName();
+            SearchName.Text = "";
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Populate(); 
+
         }
     }
 }

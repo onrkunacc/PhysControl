@@ -47,5 +47,17 @@ namespace Fizyozel
         {
 
         }
+
+        private void bunifuButton3_Click_1(object sender, EventArgs e)
+        {
+            ViewMembersForm viewMembersForm = new ViewMembersForm();
+            viewMembersForm.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

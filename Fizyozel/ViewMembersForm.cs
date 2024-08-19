@@ -47,9 +47,31 @@ namespace Fizyozel
 
         private void button4_Click(object sender, EventArgs e)
         {
-            LoginForm log = new LoginForm();
-            log.Show();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
             this.Hide();
+        }
+        private void FilterByName()
+        {
+            Con.Open();
+            string query = "select * from MemberTbl where MName = '" + SearchMember.Text + "';";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder();
+            var ds = new DataSet();
+            sda.Fill(ds);
+            MemberSDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FilterByName();
+            SearchMember.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Populate();
         }
     }
 }

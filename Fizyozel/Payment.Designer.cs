@@ -36,6 +36,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +53,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.NameCb = new System.Windows.Forms.ComboBox();
             this.PaymentDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.SearchName = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PaymentDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,7 +163,7 @@
             this.AmountTb.Padding = new System.Windows.Forms.Padding(3);
             this.AmountTb.PasswordChar = '\0';
             this.AmountTb.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.AmountTb.PlaceholderText = "Name";
+            this.AmountTb.PlaceholderText = "Amount";
             this.AmountTb.ReadOnly = false;
             this.AmountTb.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.AmountTb.SelectedText = "";
@@ -169,7 +177,7 @@
             this.AmountTb.TextMarginBottom = 0;
             this.AmountTb.TextMarginLeft = 3;
             this.AmountTb.TextMarginTop = 1;
-            this.AmountTb.TextPlaceholder = "Name";
+            this.AmountTb.TextPlaceholder = "Amount";
             this.AmountTb.UseSystemPasswordChar = false;
             this.AmountTb.WordWrap = true;
             // 
@@ -286,12 +294,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.PaymentDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.PaymentDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.PaymentDGV.Location = new System.Drawing.Point(401, 218);
+            this.PaymentDGV.Location = new System.Drawing.Point(391, 275);
             this.PaymentDGV.Name = "PaymentDGV";
             this.PaymentDGV.RowHeadersVisible = false;
             this.PaymentDGV.RowHeadersWidth = 51;
             this.PaymentDGV.RowTemplate.Height = 25;
-            this.PaymentDGV.Size = new System.Drawing.Size(820, 553);
+            this.PaymentDGV.Size = new System.Drawing.Size(820, 522);
             this.PaymentDGV.TabIndex = 46;
             this.PaymentDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.PaymentDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -315,11 +323,132 @@
             this.PaymentDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.DeepPink;
             this.PaymentDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.DeepPink;
+            this.label7.Location = new System.Drawing.Point(709, 156);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(225, 52);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Payments";
+            // 
+            // SearchName
+            // 
+            this.SearchName.AcceptsReturn = false;
+            this.SearchName.AcceptsTab = false;
+            this.SearchName.AnimationSpeed = 200;
+            this.SearchName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.SearchName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.SearchName.AutoSizeHeight = true;
+            this.SearchName.BackColor = System.Drawing.Color.Transparent;
+            this.SearchName.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchName.BackgroundImage")));
+            this.SearchName.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.SearchName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.SearchName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.SearchName.BorderColorIdle = System.Drawing.Color.Silver;
+            this.SearchName.BorderRadius = 1;
+            this.SearchName.BorderThickness = 1;
+            this.SearchName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.SearchName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.SearchName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchName.DefaultFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SearchName.DefaultText = "";
+            this.SearchName.FillColor = System.Drawing.Color.White;
+            this.SearchName.HideSelection = true;
+            this.SearchName.IconLeft = null;
+            this.SearchName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchName.IconPadding = 10;
+            this.SearchName.IconRight = null;
+            this.SearchName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.SearchName.Lines = new string[0];
+            this.SearchName.Location = new System.Drawing.Point(599, 218);
+            this.SearchName.MaxLength = 32767;
+            this.SearchName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.SearchName.Modified = false;
+            this.SearchName.Multiline = false;
+            this.SearchName.Name = "SearchName";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchName.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.SearchName.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchName.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SearchName.OnIdleState = stateProperties8;
+            this.SearchName.Padding = new System.Windows.Forms.Padding(3);
+            this.SearchName.PasswordChar = '\0';
+            this.SearchName.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.SearchName.PlaceholderText = "Search";
+            this.SearchName.ReadOnly = false;
+            this.SearchName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SearchName.SelectedText = "";
+            this.SearchName.SelectionLength = 0;
+            this.SearchName.SelectionStart = 0;
+            this.SearchName.ShortcutsEnabled = true;
+            this.SearchName.Size = new System.Drawing.Size(251, 41);
+            this.SearchName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.SearchName.TabIndex = 48;
+            this.SearchName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SearchName.TextMarginBottom = 0;
+            this.SearchName.TextMarginLeft = 3;
+            this.SearchName.TextMarginTop = 1;
+            this.SearchName.TextPlaceholder = "Search";
+            this.SearchName.UseSystemPasswordChar = false;
+            this.SearchName.WordWrap = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DeepPink;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.Snow;
+            this.button4.Location = new System.Drawing.Point(866, 218);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 41);
+            this.button4.TabIndex = 49;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DeepPink;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.ForeColor = System.Drawing.Color.Snow;
+            this.button5.Location = new System.Drawing.Point(958, 217);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(86, 41);
+            this.button5.TabIndex = 50;
+            this.button5.Text = "Refresh";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 880);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.SearchName);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.PaymentDGV);
             this.Controls.Add(this.NameCb);
             this.Controls.Add(this.button1);
@@ -359,5 +488,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox NameCb;
         private Guna.UI2.WinForms.Guna2DataGridView PaymentDGV;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.UI.WinForms.BunifuTextBox SearchName;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
