@@ -28,5 +28,24 @@ namespace Fizyozel
             addMember.Show();
             this.Hide();
         }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            UpdateDeleteMemberForm updateMember = new UpdateDeleteMemberForm();
+            updateMember.Show();
+            this.Hide();
+        }
+
+        private void bunifuButton4_Click(object sender, EventArgs e)
+        {
+            Payment pay = new Payment();
+            pay.Show();
+            this.Hide();
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

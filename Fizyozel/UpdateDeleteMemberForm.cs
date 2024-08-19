@@ -43,7 +43,7 @@ namespace Fizyozel
         int key =0;
         private void MemberSDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            key = Convert.ToInt32(MemberSDGV.SelectedRows[0].Cells[1].Value.ToString());
+            key = Convert.ToInt32(MemberSDGV.SelectedRows[0].Cells[0].Value.ToString());
             NameTb.Text= MemberSDGV.SelectedRows[0].Cells[1].Value.ToString();
             PhoneTb.Text = MemberSDGV.SelectedRows[0].Cells[2].Value.ToString();
             GenderCb.Text= MemberSDGV.SelectedRows[0].Cells[3].Value.ToString();
@@ -64,8 +64,8 @@ namespace Fizyozel
 
         private void button4_Click(object sender, EventArgs e)
         {
-            LoginForm log = new LoginForm();
-            log.Show();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
             this.Hide();
         }
 
@@ -77,7 +77,48 @@ namespace Fizyozel
             }
             else
             {
+                try
+                {
+                    Con.Open();
+                    string query = "delete from MemberTbl where MId = "+key+";";
+                    SqlCommand cmd = new SqlCommand(query,Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Member deleted successfully");
+                    Con.Close();
+                    Populate();
 
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (key == 0 || NameTb.Text == "" || PhoneTb.Text == "" || AmountTb.Text == "" || AgeTb.Text == "" ||GenderCb.Text =="" || TimingCb.Text=="")
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string query = "update MemberTbl set MName='" + NameTb.Text + "',MPhone = '"+PhoneTb.Text+"',MGen='"+GenderCb.Text+"',MAge ="+AgeTb.Text+",MAmount="+AmountTb.Text+",MTiming ='"+TimingCb.Text+"'where MId = "+key+";";
+
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Member updated successfully");
+                    Con.Close();
+                    Populate();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

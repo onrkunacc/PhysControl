@@ -77,8 +77,8 @@ namespace Fizyozel
 
         private void button4_Click(object sender, EventArgs e)
         {
-            LoginForm log = new LoginForm();
-            log.Show();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
             this.Hide();
 
         }
